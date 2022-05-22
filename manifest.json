@@ -1,0 +1,17 @@
+{
+  "name": "Reading Helper",
+  "description": "Dumb implementation of something similar to Bionic Reading",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "Prism System & Lexi",
+  "action": {
+    "default_title": "Readify The Page"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "options.js"
+  }
+}
