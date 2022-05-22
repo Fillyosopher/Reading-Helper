@@ -8,7 +8,8 @@ function HalfBold(parentElement) {
     if (parentElement.childNodes[i].nodeType == 3
       && parentElement.childNodes[i].nodeName != "B"
       && parentElement.childNodes[i].textContent != "") {
-      resultInnerHTML += parentElement.childNodes[i].textContent.split('\n').reduce(
+
+      resultInnerHTML += parentElement.childNodes[i].textContent.split(/(\n)/).reduce(
         (building_message, paragraph) => {
           if (paragraph.trim().length == 0) return building_message + paragraph;
 
@@ -33,7 +34,7 @@ function HalfBold(parentElement) {
 
           if (test1 == "") return building_message;
           if (building_message == "") return test1;
-          return building_message + "\n" + test1;
+          return building_message + test1;
         }, "");
     } else {
       if (parentElement.childNodes[i].outerHTML != undefined)
