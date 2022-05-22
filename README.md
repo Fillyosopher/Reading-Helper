@@ -2,11 +2,12 @@
 See the following for a visual representation of Bionic Reading, which inspired this: https://twitter.com/juanbuis/status/1526900107379105793/photo/1
 
 # Installation Instructions:
-- unzip (or git clone) the file somewhere
+- Click the green Code button above, then click "Download ZIP"
+- unzip the file literally anywhere
 - Open Chrome Extensions
 - In the upper right, turn on developer mode
-- Click Load unpacked
-- select the folder, it should load as Reading Helper
+- Click "Load Unpacked"
+- Select the folder, it should load as Reading Helper
 - Go to the upper right and click the puzzle piece to show the extension (which will look like a Grey Square with a White R)
 
 # To Use:
