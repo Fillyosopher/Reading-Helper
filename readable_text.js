@@ -41,7 +41,6 @@ const ignoreTags = {
 };
 
 for (var i = 0; collection[i] != undefined; i++) {
-  if (collection[i] == undefined) continue;
   if (ignoreTags[collection[i].nodeName]) continue;
   if (collection[i].nodeType != 1) continue;
   if (collection[i].childNodes.length == 0) continue;
