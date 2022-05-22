@@ -5,9 +5,7 @@ function HalfBold(parentElement) {
   var length = parentElement.childNodes.length;
   var resultInnerHTML = "";
   for (var i = 0; i < length; i++) {
-    if (parentElement.childNodes[i].nodeType == 3
-      && parentElement.childNodes[i].nodeName != "B"
-      && parentElement.childNodes[i].textContent != "") {
+    if (parentElement.childNodes[i].nodeName == "#text") {
 
       resultInnerHTML += parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).reduce(
         (building_message, word) => {
