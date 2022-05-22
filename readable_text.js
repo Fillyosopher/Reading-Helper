@@ -9,31 +9,16 @@ function HalfBold(parentElement) {
       && parentElement.childNodes[i].nodeName != "B"
       && parentElement.childNodes[i].textContent != "") {
 
-      resultInnerHTML += parentElement.childNodes[i].textContent.split(/(\n)/).reduce(
-        (building_message, paragraph) => {
-          if (paragraph.trim().length == 0) return building_message + paragraph;
+      resultInnerHTML += parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).reduce(
+        (building_message, word) => {
+          var trimmedWordLength = word.trim().length;
+          if (trimmedWordLength == 0) return building_message + word;
 
-          var test1 = paragraph.split(" ").reduce(
-            (building_paragraph, word) => {
-              if (word.trim().length == 0) return building_paragraph + word;
+          var length = Math.floor(trimmedWordLength / 2);
+          if (length == 0) length = 1;
 
-              var length = Math.floor(word.length / 2);
-              if (length == 0) length = 1;
-              if (length > 6) length = 6;
-              var test2 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
+          var test1 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
 
-              if (test2 == "") return building_paragraph;
-              if (building_paragraph == "") return test2;
-              return building_paragraph + " " + test2;
-            }, "");
-
-          var startspaces = paragraph.match(/^( )+/g)
-          if (startspaces != null) test1 = startspaces + test1;
-          var endspaces = paragraph.match(/( )+$/g)
-          if (endspaces != null) test1 += endspaces;
-
-          if (test1 == "") return building_message;
-          if (building_message == "") return test1;
           return building_message + test1;
         }, "");
     } else {
