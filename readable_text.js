@@ -5,7 +5,9 @@ function HalfBold(parentElement) {
   var length = parentElement.childNodes.length;
   var resultInnerHTML = "";
   for (var i = 0; i < length; i++) {
-    if (parentElement.childNodes[i].nodeType == 3 && parentElement.childNodes[i].nodeName != "B") {
+    if (parentElement.childNodes[i].nodeType == 3
+      && parentElement.childNodes[i].nodeName != "B"
+      && parentElement.childNodes[i].textContent != "") {
       resultInnerHTML += parentElement.childNodes[i].textContent.split('\n').reduce(
         (building_message, paragraph) => {
           if (paragraph.trim().length == 0) return building_message + paragraph;
@@ -46,6 +48,7 @@ for (var i = 0; collection[i] != undefined; i++) {
   if (collection[i].nodeName == "B") continue;
   if (collection[i].nodeType != 1) continue;
   if (collection[i].nodeName == "SCRIPT") continue;
+  if (collection[i].nodeName == "STYLE") continue;
   if (collection[i].childNodes.length == 0) continue;
   HalfBold(collection[i]);
 }
