@@ -2,14 +2,14 @@
 Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/1526900107379105793/photo/1), this Bookmarklet modifies a webpage to display the first half of each word in bold.  Can also be installed as a Chrome Extension. Works on essentially any webpage!
 
 # Examples
-![Pre convert0](https://i.imgur.com/miu58Yib.png)
-![Post convert0](https://i.imgur.com/HRFz7p4b.png)
-![Pre convert1](https://i.imgur.com/K29FCgdb.png)
-![Post convert1](https://i.imgur.com/MrfssY3b.png)
-![Pre convert2](https://i.imgur.com/BZquDN2b.png)
-![Post convert2](https://i.imgur.com/flXqvoEb.png)
-![Pre convert3](https://i.imgur.com/CAo40QAb.png)
-![Post convert3](https://i.imgur.com/wfqXwijb.png)
+[![Pre convert0](https://i.imgur.com/miu58Yib.png)](https://i.imgur.com/miu58Yi.png)
+[![Post convert0](https://i.imgur.com/HRFz7p4b.png)](https://i.imgur.com/HRFz7p4.png)
+[![Pre convert1](https://i.imgur.com/K29FCgdb.png)](https://i.imgur.com/K29FCgd.png)
+[![Post convert1](https://i.imgur.com/MrfssY3b.png)](https://i.imgur.com/MrfssY3.png)
+[![Pre convert2](https://i.imgur.com/BZquDN2b.png)](https://i.imgur.com/BZquDN2.png)
+[![Post convert2](https://i.imgur.com/flXqvoEb.png)](https://i.imgur.com/flXqvoE.png)
+[![Pre convert3](https://i.imgur.com/CAo40QAb.png)](https://i.imgur.com/CAo40QA.png)
+[![Post convert3](https://i.imgur.com/wfqXwijb.png)](https://i.imgur.com/wfqXwij.png)
 
 # Chrome Installation Instructions:
 - Click the green Code button above, then click "Download ZIP"
