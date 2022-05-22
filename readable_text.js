@@ -10,26 +10,18 @@ function HalfBold(parentElement) {
         (building_message, paragraph) => {
           if (paragraph.trim().length == 0) return building_message + paragraph;
 
-          var test1 = paragraph.split('.').reduce(
-            (building_paragraph, sentence) => {
-              if (sentence.trim().length == 0) return building_paragraph + sentence;
+          var test1 = paragraph.split(' ').reduce(
+            (building_paragraph, word) => {
+              if (word.trim().length == 0) return building_paragraph + word;
 
-              var test2 = sentence.split(' ').reduce(
-                (building_sentence, word) => {
-                  if (word.trim().length == 0) return building_sentence + word;
+              var length = Math.floor(word.length / 2);
+              if (length == 0) length = 1;
+              if (length > 6) length = 6;
+              var test2 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
 
-                  var length = Math.floor(word.length / 2);
-                  if (length == 0) length = 1;
-                  if (length > 6) length = 6;
-                  var test3 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
-
-                  if (test3 == "") return building_sentence;
-                  if (building_sentence == "") return test3;
-                  return building_sentence + " " + test3;
-                }, "");
-
+              if (test2 == "") return building_paragraph;
               if (building_paragraph == "") return test2;
-              return building_paragraph + "." + test2;
+              return building_paragraph + " " + test2;
             }, "");
 
           if (test1 == "") return building_message;
