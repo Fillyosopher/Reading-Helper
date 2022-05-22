@@ -18,3 +18,6 @@ See the following for a visual representation of Bionic Reading, which inspired 
 
 # Other:
 If anyone wants to fork this and actually upload it to the Chrome Dev store, please go for it!  This was the work of 3 hours, has many issues, and isn't something I plan to refine much.  I'd be quite happy if someone else took it and made something better! (This entire extention is ~100 lines of text, it's EASY to modify.)
+
+# Similar Projects:
+- vonrosceau's Bookmarklet (might work for browsers which don't support Chrome Extensions!): https://twitter.com/vonrosceau/status/1528375035894894592
