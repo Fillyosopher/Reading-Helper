@@ -28,7 +28,7 @@ function HalfBold(parentElement) {
 
           if (test1 == "") return building_message;
           if (building_message == "") return test1;
-          return building_message + "<br/>" + test1;
+          return building_message + "\n" + test1;
         }, "");
     } else {
       if (parentElement.childNodes[i].outerHTML != undefined)
