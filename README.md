@@ -1,17 +1,23 @@
 # What is it?
-See the following for a visual representation of Bionic Reading, which inspired this: https://twitter.com/juanbuis/status/1526900107379105793/photo/1
+Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/1526900107379105793/photo/1), this Bookmarklet modifies a webpage to display the first half of each word in bold.  Can also be installed as a Chrome Extension. Works on essentially any webpage!
 
-# Example conversions
-![Example](https://i.ibb.co/Tr8Dpzr/Example.png)
-
-# Installation Instructions:
+# Chrome Installation Instructions:
 - Click the green Code button above, then click "Download ZIP"
-- unzip the file literally anywhere
+- Unzip the file literally anywhere
 - Open Chrome Extensions
 - In the upper right, turn on developer mode
 - Click "Load Unpacked"
 - Select the folder, it should load as Reading Helper extension
 - Go to the upper right and click the puzzle piece to show the extension (which will look like a Grey Square with a White R)
+- **When you want to use it, click the Extension button and it will convert the page**
+
+# Bookmarklet Instructions:
+- Open "readable_text.js"
+- Click "Copy Raw Contents" button, which looks like Two Squares
+- Create a new Bookmark named "Reading Helper" (or name it something else if you want!)
+- In the URL, paste what you copied
+- Save the Bookmark
+- **When you want to use it, click the Bookmark and it will convert the page**
 
 # To Use:
 - When you want to run Reading Helper against a page, click the extention button and it will convert the page
@@ -21,5 +27,22 @@ If anyone wants to fork this and actually upload it to the Chrome Dev store, ple
 
 # Similar Projects:
 - vonrosceau's Bookmarklet: https://twitter.com/vonrosceau/status/1528375035894894592
-  - works on browsers which don't support Chrome Extenions (This is huge)
 - axoletlmusic's Not Bionic Reading: https://not-br.neocities.org
+
+# Changelog
+5/22 Rewrite 2
+- TL;DR no longer breaks dynamic pages
+- No longer processes invisible tags, like style and meta
+- No longer processes whitespace individually
+- No longer recreates breaks buttons and interactables
+- Now also works as a Bookmarklet
+
+5/22 Rewrite 1
+- TL;DR catchs text across the entire page, breaks fewer things
+- Runs against all elements on the page, rather than a subset
+- No longer avoids full sentences if they contain another format tag
+- No longer breaks links
+- No longer processes script tags
+
+5/21
+- Initial Release
