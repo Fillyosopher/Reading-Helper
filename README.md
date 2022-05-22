@@ -21,3 +21,4 @@ If anyone wants to fork this and actually upload it to the Chrome Dev store, ple
 
 # Similar Projects:
 - vonrosceau's Bookmarklet (might work for browsers which don't support Chrome Extensions!): https://twitter.com/vonrosceau/status/1528375035894894592
+- axoletlmusic's Not Bionic Reading: https://not-br.neocities.org
