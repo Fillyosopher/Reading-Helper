@@ -6,36 +6,36 @@ function HalfBold(parentElement) {
   var resultInnerHTML = "";
   for (var i = 0; i < length; i++) {
     if (parentElement.childNodes[i].nodeType == 3 && parentElement.childNodes[i].nodeName != "B") {
-      resultInnerHTML += parentElement.childNodes[i].textContent.split('\n').reduce((building_message, paragraph) => {
-        var test1 = paragraph.split('.').reduce((building_paragraph, sentence) => {
-          var test2 = "";
+      resultInnerHTML += parentElement.childNodes[i].textContent.split('\n').reduce(
+        (building_message, paragraph) => {
+          if (paragraph.trim().length == 0) return building_message + paragraph;
 
-          test2 = sentence.split(' ').reduce((building_sentence, word) => {
-            if (word.trim().length == 0) return building_sentence + word;
-            var length = Math.floor(word.length / 2);
-            if (length == 0) length = 1;
-            if (length > 6) length = 6;
-            var test3 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
-            if (test3 == null) return building_sentence;
-            if (test3 == undefined) return building_sentence;
-            if (test3 == "") return building_sentence;
-            if (building_sentence == "") return test3;
-            return building_sentence + " " + test3;
-          }, "");
+          var test1 = paragraph.split('.').reduce(
+            (building_paragraph, sentence) => {
+              if (sentence.trim().length == 0) return building_paragraph + sentence;
 
-          if (test2 == null) return building_paragraph;
-          if (test2 == undefined) return building_paragraph;
-          if (test2 == "") return building_paragraph;
-          if (building_paragraph == "") return test2;
-          return building_paragraph + "." + test2;
+              var test2 = sentence.split(' ').reduce(
+                (building_sentence, word) => {
+                  if (word.trim().length == 0) return building_sentence + word;
+
+                  var length = Math.floor(word.length / 2);
+                  if (length == 0) length = 1;
+                  if (length > 6) length = 6;
+                  var test3 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
+
+                  if (test3 == "") return building_sentence;
+                  if (building_sentence == "") return test3;
+                  return building_sentence + " " + test3;
+                }, "");
+
+              if (building_paragraph == "") return test2;
+              return building_paragraph + "." + test2;
+            }, "");
+
+          if (test1 == "") return building_message;
+          if (building_message == "") return test1;
+          return building_message + "<br/>" + test1;
         }, "");
-
-        if (test1 == null) return building_message;
-        if (test1 == undefined) return building_message;
-        if (test1 == "") return building_message;
-        if (building_message == "") return test1;
-        return building_message + "<br/>" + test1;
-      }, "");
     } else {
       if (parentElement.childNodes[i].outerHTML != undefined)
         resultInnerHTML += parentElement.childNodes[i].outerHTML;
