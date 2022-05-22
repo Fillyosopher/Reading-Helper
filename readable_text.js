@@ -47,14 +47,13 @@ function HalfBold(parentElement) {
         });
       // and remove the original text element
       parentElement.removeChild(parentElement.childNodes[i])
-      i += newNodeCount;
+      i += newNodeCount - 1;
     }
   }
 }
 
-// both a way to stop from processing certain nodes and
-// causes an convenient error to prevent running the script multiple times on a page
-const ignoreTags = {
+// a way to stop from processing certain nodes
+var ignoreTags = {
   B: true,
   META: true,
   LINK: true,
