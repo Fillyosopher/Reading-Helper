@@ -12,7 +12,7 @@ function HalfBold(parentElement) {
         (building_message, paragraph) => {
           if (paragraph.trim().length == 0) return building_message + paragraph;
 
-          var test1 = paragraph.split(' ').reduce(
+          var test1 = paragraph.split(" ").reduce(
             (building_paragraph, word) => {
               if (word.trim().length == 0) return building_paragraph + word;
 
@@ -25,6 +25,11 @@ function HalfBold(parentElement) {
               if (building_paragraph == "") return test2;
               return building_paragraph + " " + test2;
             }, "");
+
+          var startspaces = paragraph.match(/^( )+/g)
+          if (startspaces != null) test1 = startspaces + test1;
+          var endspaces = paragraph.match(/( )+$/g)
+          if (endspaces != null) test1 += endspaces;
 
           if (test1 == "") return building_message;
           if (building_message == "") return test1;
