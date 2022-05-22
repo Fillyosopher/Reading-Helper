@@ -51,10 +51,9 @@ var collection = document.body.getElementsByTagName("*");
 
 for (var i = 0; collection[i] != undefined; i++) {
   if (collection[i] == undefined) continue;
+  if (collection[i].nodeName == "B") continue;
   if (collection[i].nodeType != 1) continue;
   if (collection[i].nodeName == "SCRIPT") continue;
-  if (collection[i].nodeName == "B") continue;
-  var childLength = collection[i].childNodes.length;
-  if (childLength == 0) continue;
+  if (collection[i].childNodes.length == 0) continue;
   HalfBold(collection[i]);
 }
