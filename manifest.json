@@ -1,7 +1,7 @@
 {
   "name": "Reading Helper",
   "description": "Dumb implementation of something similar to Bionic Reading",
-  "version": "1.0",
+  "version": "1.2",
   "manifest_version": 3,
   "author": "Prism System & Lexi",
   "action": {

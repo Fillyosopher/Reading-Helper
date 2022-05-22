@@ -1,33 +1,52 @@
 
+function insertAfter(newNode, existingNode) {
+  if (existingNode.nextSibling != undefined)
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+  else
+    existingNode.parentNode.appendChild(newNode);
+}
+
 function HalfBold(parentElement) {
   if (parentElement == undefined) return;
 
   var length = parentElement.childNodes.length;
-  var resultInnerHTML = "";
-  for (var i = 0; i < length; i++) {
-    if (parentElement.childNodes[i].nodeName == "#text") {
-
-      resultInnerHTML += parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).reduce(
-        (building_message, word) => {
+  for (var i = 0; i < length && parentElement.childNodes[i] != undefined; i++) {
+    if (parentElement.childNodes[i].nodeName == "#text" &&
+      parentElement.childNodes[i].textContent.trim().length != 0
+    ) {
+      var recentNode = parentElement.childNodes[i];
+      var newNodeCount = 0;
+      parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).forEach(
+        word => {
+          if (word.length == 0) return;
           var trimmedWordLength = word.trim().length;
-          if (trimmedWordLength == 0) return building_message + word;
+          if (trimmedWordLength == 0) {
+            var textNode = document.createTextNode(word)
+            insertAfter(textNode, recentNode);
+            newNodeCount++;
+            recentNode = textNode;
+            return;
+          }
 
           var length = Math.floor(trimmedWordLength / 2);
           if (length == 0) length = 1;
 
-          var test1 = "<b>" + word.slice(0, length) + "</b>" + word.slice(length);
+          const bold = document.createElement('b');
+          bold.innerHTML = word.slice(0, length)
+          insertAfter(bold, recentNode);
+          newNodeCount++;
+          recentNode = bold
 
-          return building_message + test1;
-        }, "");
-    } else {
-      if (parentElement.childNodes[i].outerHTML != undefined)
-        resultInnerHTML += parentElement.childNodes[i].outerHTML;
+          if (word.length == 1) return;
+          var textNode = document.createTextNode(word.slice(length))
+          insertAfter(textNode, recentNode);
+          newNodeCount++;
+          recentNode = textNode;
+        });
+      parentElement.removeChild(parentElement.childNodes[i])
+      i += newNodeCount;
     }
   }
-
-  if (resultInnerHTML == null) return;
-  if (resultInnerHTML == undefined) return;
-  parentElement.innerHTML = resultInnerHTML;
 }
 
 var collection = document.body.getElementsByTagName("*");
