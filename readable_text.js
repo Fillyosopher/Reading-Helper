@@ -9,10 +9,8 @@ function insertAfter(newNode, existingNode) {
 
 // process all children of a Node
 function HalfBold(parentElement) {
-  var length = parentElement.childNodes.length;
-
   // iterating through all children of the parent
-  for (var i = 0; i < length && parentElement.childNodes[i] != undefined; i++) {
+  for (var i = 0; parentElement.childNodes[i] != undefined; i++) {
     // if the child is a text element
     if (parentElement.childNodes[i].nodeName == "#text" &&
       parentElement.childNodes[i].textContent.trim().length != 0
