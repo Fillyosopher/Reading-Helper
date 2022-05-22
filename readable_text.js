@@ -49,12 +49,18 @@ function HalfBold(parentElement) {
 
 var collection = document.body.getElementsByTagName("*");
 
+const ignoreTags = {
+  B: true,
+  META: true,
+  LINK: true,
+  SCRIPT: true,
+  STYLE: true,
+};
+
 for (var i = 0; collection[i] != undefined; i++) {
   if (collection[i] == undefined) continue;
-  if (collection[i].nodeName == "B") continue;
+  if (ignoreTags[collection[i].nodeName]) continue;
   if (collection[i].nodeType != 1) continue;
-  if (collection[i].nodeName == "SCRIPT") continue;
-  if (collection[i].nodeName == "STYLE") continue;
   if (collection[i].childNodes.length == 0) continue;
   HalfBold(collection[i]);
 }
