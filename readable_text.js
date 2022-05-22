@@ -1,4 +1,5 @@
 
+// Insert one Node after another Node
 function insertAfter(newNode, existingNode) {
   if (existingNode.nextSibling != undefined)
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
@@ -6,14 +7,19 @@ function insertAfter(newNode, existingNode) {
     existingNode.parentNode.appendChild(newNode);
 }
 
+// process all children of a Node
 function HalfBold(parentElement) {
   var length = parentElement.childNodes.length;
+
+  // iterating through all children of the parent
   for (var i = 0; i < length && parentElement.childNodes[i] != undefined; i++) {
+    // if the child is a text element
     if (parentElement.childNodes[i].nodeName == "#text" &&
       parentElement.childNodes[i].textContent.trim().length != 0
     ) {
       var recentNode = parentElement.childNodes[i];
       var newNodeCount = 0;
+      // add bold and non-bold elements
       parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).forEach(
         word => {
           if (word.length == 0) return;
@@ -41,14 +47,15 @@ function HalfBold(parentElement) {
           newNodeCount++;
           recentNode = textNode;
         });
+      // and remove the original text element
       parentElement.removeChild(parentElement.childNodes[i])
       i += newNodeCount;
     }
   }
 }
 
-var collection = document.body.getElementsByTagName("*");
-
+// both a way to stop from processing certain nodes and
+// causes an convenient error to prevent running the script multiple times on a page
 const ignoreTags = {
   B: true,
   META: true,
@@ -56,6 +63,9 @@ const ignoreTags = {
   SCRIPT: true,
   STYLE: true,
 };
+
+// we check all Nodes in the body
+var collection = document.body.getElementsByTagName("*");
 
 for (var i = 0; collection[i] != undefined; i++) {
   if (ignoreTags[collection[i].nodeName]) continue;

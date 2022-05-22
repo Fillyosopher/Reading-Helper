@@ -21,8 +21,5 @@ If anyone wants to fork this and actually upload it to the Chrome Dev store, ple
 
 # Similar Projects:
 - vonrosceau's Bookmarklet: https://twitter.com/vonrosceau/status/1528375035894894592
-  - Frankly better than this project in most situations
-  - Pro: works on browsers which don't support Chrome Extenions (This is huge)
-  - Pro: doesn't break functionality on sites (This is huge)
-  - Con: overbolds words with trailing whitespace (This is minor)
+  - works on browsers which don't support Chrome Extenions (This is huge)
 - axoletlmusic's Not Bionic Reading: https://not-br.neocities.org
