@@ -1,6 +1,16 @@
 # What is it?
 Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/1526900107379105793/photo/1), this Bookmarklet modifies a webpage to display the first half of each word in bold.  Can also be installed as a Chrome Extension. Works on essentially any webpage!
 
+# Examples
+![Pre convert0](https://i.imgur.com/miu58Yib.png)
+![Post convert0](https://i.imgur.com/HRFz7p4b.png)
+![Pre convert1](https://i.imgur.com/K29FCgdb.png)
+![Post convert1](https://i.imgur.com/MrfssY3b.png)
+![Pre convert2](https://i.imgur.com/BZquDN2b.png)
+![Post convert2](https://i.imgur.com/flXqvoEb.png)
+![Pre convert3](https://i.imgur.com/CAo40QAb.png)
+![Post convert3](https://i.imgur.com/wfqXwijb.png)
+
 # Chrome Installation Instructions:
 - Click the green Code button above, then click "Download ZIP"
 - Unzip the file literally anywhere
@@ -18,9 +28,6 @@ Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/152690010737910
 - In the URL, paste what you copied
 - Save the Bookmark
 - **When you want to use it, click the Bookmark and it will convert the page**
-
-# To Use:
-- When you want to run Reading Helper against a page, click the extention button and it will convert the page
 
 # Other:
 If anyone wants to fork this and actually upload it to the Chrome Dev store, please go for it!  This was the work of 3 hours, has many issues, and isn't something I plan to refine much.  I'd be quite happy if someone else took it and made something better! (This entire extention is ~100 lines of text, it's EASY to modify.)
