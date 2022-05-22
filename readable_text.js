@@ -7,8 +7,6 @@ function insertAfter(newNode, existingNode) {
 }
 
 function HalfBold(parentElement) {
-  if (parentElement == undefined) return;
-
   var length = parentElement.childNodes.length;
   for (var i = 0; i < length && parentElement.childNodes[i] != undefined; i++) {
     if (parentElement.childNodes[i].nodeName == "#text" &&
