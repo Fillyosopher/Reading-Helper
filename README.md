@@ -37,6 +37,10 @@ If anyone wants to fork this and actually upload it to the Chrome Dev store, ple
 - axoletlmusic's Not Bionic Reading: https://not-br.neocities.org
 
 # Changelog
+5/22 1.3.0
+- TL;DR add support for some unusual webssites, like EPUB readers
+- Add iframe documents to traversal
+
 5/22 Rewrite 2
 - TL;DR no longer breaks dynamic pages
 - No longer processes invisible tags, like style and meta

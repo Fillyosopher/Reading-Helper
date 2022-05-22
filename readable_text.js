@@ -61,13 +61,22 @@ javascript: (() => {
     STYLE: true,
   };
 
-  /* we check all Nodes in the body*/
-  var collection = document.body.getElementsByTagName("*");
+  const processDocumentBody = (element) => {
+    /* we check all Nodes in the body*/
+    var collection = element.body.getElementsByTagName("*");
 
-  for (var i = 0; collection[i] != undefined; i++) {
-    if (ignoreTags[collection[i].nodeName]) continue;
-    if (collection[i].nodeType != 1) continue;
-    if (collection[i].childNodes.length == 0) continue;
-    HalfBold(collection[i]);
-  }
+    for (var i = 0; collection[i] != undefined; i++) {
+      if (ignoreTags[collection[i].nodeName]) continue;
+      if (collection[i].nodeType != 1) continue;
+      if (collection[i].nodeName == "IFRAME") {
+        processDocumentBody(collection[i].contentDocument);
+      } else {
+        if (collection[i].childNodes.length == 0) continue;
+        HalfBold(collection[i]);
+      }
+    }
+  };
+
+  processDocumentBody(document);
+
 })();
