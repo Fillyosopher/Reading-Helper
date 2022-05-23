@@ -63,6 +63,8 @@ javascript: (() => {
 
   const processDocumentBody = (element) => {
     /* we check all Nodes in the body*/
+    if (element == null) return;
+    if (element.body == undefined) return;
     var collection = element.body.getElementsByTagName("*");
 
     for (var i = 0; collection[i] != undefined; i++) {
