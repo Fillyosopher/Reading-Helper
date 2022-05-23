@@ -48,8 +48,9 @@ If you're having trouble, we have pictures explaining each step [here](https://g
 - abenrob's Webpage: https://observablehq.com/@abenrob/bionic-reading-test
 
 ## Document Readers/Converters
-- Official Bionic Reading Test Page: https://bionic.staging.webulos.com/test/
+- Official Bionic Reading Test Page: https://bionic.staging.webulos.com/test/  (TXT, RTF, RTFD, EPUB or DOCX; online reader)
 - TorpedoRead (not yet released): https://torpedoread.com/ (Supposedly will support EPUB and PDF converters)
+- GPFSimon's Word Document Macro: https://github.com/GPFSimon/Speed-Bionic-Reading (DOCX; works in word application)
 
 # Other:
 If anyone wants to fork this and actually upload it to the Chrome Dev store, please go for it!  This was the work of 3 hours, has many issues, and isn't something I plan to refine much.  I'd be quite happy if someone else took it and made something better! (This entire extention is ~100 lines of text, it's EASY to modify.)
