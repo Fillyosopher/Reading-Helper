@@ -37,7 +37,9 @@ If you're having trouble, we have pictures explaining each step [here](https://g
 If anyone wants to fork this and actually upload it to the Chrome Dev store, please go for it!  This was the work of 3 hours, has many issues, and isn't something I plan to refine much.  I'd be quite happy if someone else took it and made something better! (This entire extention is ~100 lines of text, it's EASY to modify.)
 
 # Similar Projects:
+- TorpedoRead: https://torpedoread.com/
 - vonrosceau's Bookmarklet: https://twitter.com/vonrosceau/status/1528375035894894592
+- ansh's Bookmarklet: https://github.com/ansh/bionic-reading
 - vzekharov's Chrome Extension: https://github.com/vzakharov/bionic-reading-extension
 - axoletlmusic's Not Bionic Reading Webpage: https://not-br.neocities.org
 - 100L5's Webpage: https://10015.io/tools/bionic-reading-converter
