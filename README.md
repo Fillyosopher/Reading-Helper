@@ -11,7 +11,10 @@ Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/152690010737910
 [![Pre convert3](https://i.imgur.com/CAo40QAb.png)](https://i.imgur.com/CAo40QA.png)
 [![Post convert3](https://i.imgur.com/wfqXwijb.png)](https://i.imgur.com/wfqXwij.png)
 
-# Bookmarklet Instructions:
+# Installation
+If you're having trouble, we have pictures explaining each step [here](https://github.com/Fillyosopher/Reading-Helper/wiki).
+
+## Bookmarklet Instructions (preferred method):
 - Open "readable_text.js"
 - Click "Copy Raw Contents" button, which looks like Two Squares
 - Create a new Bookmark named "Reading Helper" (or name it something else if you want!)
@@ -19,7 +22,7 @@ Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/152690010737910
 - Save the Bookmark
 - **When you want to use it, click the Bookmark and it will convert the page**
 
-# Chrome Installation Instructions:
+## Chrome Installation Instructions:
 - Click the green Code button above, then click "Download ZIP"
 - Unzip the file literally anywhere
 - Open Chrome Extensions
