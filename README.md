@@ -11,6 +11,14 @@ Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/152690010737910
 [![Pre convert3](https://i.imgur.com/CAo40QAb.png)](https://i.imgur.com/CAo40QA.png)
 [![Post convert3](https://i.imgur.com/wfqXwijb.png)](https://i.imgur.com/wfqXwij.png)
 
+# Bookmarklet Instructions:
+- Open "readable_text.js"
+- Click "Copy Raw Contents" button, which looks like Two Squares
+- Create a new Bookmark named "Reading Helper" (or name it something else if you want!)
+- In the URL, paste what you copied
+- Save the Bookmark
+- **When you want to use it, click the Bookmark and it will convert the page**
+
 # Chrome Installation Instructions:
 - Click the green Code button above, then click "Download ZIP"
 - Unzip the file literally anywhere
@@ -21,13 +29,6 @@ Inspired by [Bionic Reading](https://twitter.com/juanbuis/status/152690010737910
 - Go to the upper right and click the puzzle piece to show the extension (which will look like a Grey Square with a White R)
 - **When you want to use it, click the Extension button and it will convert the page**
 
-# Bookmarklet Instructions:
-- Open "readable_text.js"
-- Click "Copy Raw Contents" button, which looks like Two Squares
-- Create a new Bookmark named "Reading Helper" (or name it something else if you want!)
-- In the URL, paste what you copied
-- Save the Bookmark
-- **When you want to use it, click the Bookmark and it will convert the page**
 
 # Other:
 If anyone wants to fork this and actually upload it to the Chrome Dev store, please go for it!  This was the work of 3 hours, has many issues, and isn't something I plan to refine much.  I'd be quite happy if someone else took it and made something better! (This entire extention is ~100 lines of text, it's EASY to modify.)
