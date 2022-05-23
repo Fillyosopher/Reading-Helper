@@ -38,7 +38,9 @@ If anyone wants to fork this and actually upload it to the Chrome Dev store, ple
 
 # Similar Projects:
 - vonrosceau's Bookmarklet: https://twitter.com/vonrosceau/status/1528375035894894592
-- axoletlmusic's Not Bionic Reading: https://not-br.neocities.org
+- vzekharov's Chrome Extension: https://github.com/vzakharov/bionic-reading-extension
+- axoletlmusic's Not Bionic Reading Webpage: https://not-br.neocities.org
+- 100L5's Webpage: https://10015.io/tools/bionic-reading-converter
 
 # Changelog
 5/22 1.3.0
