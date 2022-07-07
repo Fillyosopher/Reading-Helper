@@ -1,4 +1,20 @@
-javascript: (() => {
+javascript: (
+
+
+  () => {
+
+    var newStyle = document.createElement('style');
+    newStyle.appendChild(document.createTextNode("\
+    @font-face {\
+        font-family:  OpenDyslexic;\
+        src: url('./OpenDyslexicMono-Regular.otf') format('opentype');\
+    }\
+    *{\
+      font-family: OpenDyslexic;\
+    }\
+    "));
+    document.getElementsByTagName('head')[0].appendChild(newStyle);
+
   /* Insert one Node after another Node */
   const insertAfter = (newNode, existingNode) => {
     if (existingNode.nextSibling != undefined)
