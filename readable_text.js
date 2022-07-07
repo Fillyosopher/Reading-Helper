@@ -1,4 +1,7 @@
-javascript: (() => {
+javascript: (
+
+
+  () => {
   /* Insert one Node after another Node */
   const insertAfter = (newNode, existingNode) => {
     if (existingNode.nextSibling != undefined)
@@ -10,13 +13,18 @@ javascript: (() => {
   /* process all children of a Node*/
   const HalfBold = (parentElement) => {
     /* iterating through all children of the parent*/
+
     for (var i = 0; parentElement.childNodes[i] != undefined; i++) {
       /* if the child is a text element*/
       if (parentElement.childNodes[i].nodeName == "#text" &&
         parentElement.childNodes[i].textContent.trim().length != 0
       ) {
-        var recentNode = parentElement.childNodes[i];
+
+        var recentNode = parentElement.childNodes[i]; // We cannot modify the text node but we will modify it's parent element
         var newNodeCount = 0;
+
+        parentElement.style.fontFamily = "Verdana";
+
         /* add bold and non-bold elements*/
         parentElement.childNodes[i].textContent.split(/(\s+|\S+)/).forEach(
           word => {
