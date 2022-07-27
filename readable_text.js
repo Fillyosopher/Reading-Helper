@@ -73,8 +73,9 @@ javascript: (() => {
         var start = existingHelperElements[i];
         var end = existingHelperElements[i].nextSibling;
         var parent = existingHelperElements[i].parentNode;
-        var originalText = document.createTextNode(start.innerHTML + (end ? end.textContent : ""));
-        start.replaceWith(originalText);
+        var plain = start.innerHTML + (end ? end.textContent : "");
+        plain = plain.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+        start.replaceWith(document.createTextNode(plain));
         if (end) end.remove();
         parent.normalize();
       }
