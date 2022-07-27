@@ -73,9 +73,9 @@ javascript: (() => {
         var start = existingHelperElements[i];
         var end = existingHelperElements[i].nextSibling;
         var parent = existingHelperElements[i].parentNode;
-        var originalText = document.createTextNode(start.innerHTML + end.textContent);
+        var originalText = document.createTextNode(start.innerHTML + (end ? end.textContent : ""));
         start.replaceWith(originalText);
-        end.remove();
+        if (end) end.remove();
         parent.normalize();
       }
     } else {
